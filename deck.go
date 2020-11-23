@@ -4,10 +4,27 @@ import "fmt"
 
 type deck []string
 
-func (d deck) show() {
+func createDeck() deck {
 
-	for i, card := range d {
-		fmt.Println(i, card)
+	cards := deck{}
+
+	cardSuites := []string{"Spades", "Diamonds", "Hearts", "Clubs"}
+	cardValues := []string{"Ace", "Two", "Three", "Four"}
+
+	for _,suite := range cardSuites {
+		for _, value := range cardValues {
+			newCard := value + " of " + suite
+			cards = append(cards, newCard )
+		}
 	}
 
+	return cards
+
+}
+
+
+func (d deck) show() {
+	for i,card := range d {
+		fmt.Println(i, card)
+	} 
 }
