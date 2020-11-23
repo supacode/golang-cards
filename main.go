@@ -4,5 +4,11 @@ import "fmt"
 
 
 func main(){
-	fmt.Println("Hello World")
+	cards := []string{newCard(), newCard() };
+
+	fmt.Println(cards)
+}
+
+func newCard() string {
+	return "Ace of Spades"
 }
