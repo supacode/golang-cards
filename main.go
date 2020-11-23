@@ -4,11 +4,17 @@ import "fmt"
 
 
 func main(){
-	cards := []string{newCard(), newCard() };
+	cards := []string{
+			newCard("Ace of Spade"),
+			newCard("Five of Diamonds"),
+		}
 
-	fmt.Println(cards)
+	for i, card := range cards {
+		fmt.Println(i + 1, card)
+	}
+	
 }
 
-func newCard() string {
-	return "Ace of Spades"
+func newCard(card string) string {
+	return card
 }
