@@ -1,9 +1,14 @@
 package main
 
+
 func main(){
 
 	deck := createDeck()
 
-	deck.show()
+	hand, deckRemainder := deal(deck, 5) 
+
+
+	hand.show()
+	deckRemainder.show()	
 
 }
