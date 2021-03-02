@@ -11,10 +11,10 @@ func createDeck() deck {
 	cardSuites := []string{"Spades", "Diamonds", "Hearts", "Clubs"}
 	cardValues := []string{"Ace", "Two", "Three", "Four"}
 
-	for _,suite := range cardSuites {
+	for _, suite := range cardSuites {
 		for _, value := range cardValues {
 			newCard := value + " of " + suite
-			cards = append(cards, newCard )
+			cards = append(cards, newCard)
 		}
 	}
 
@@ -22,14 +22,13 @@ func createDeck() deck {
 
 }
 
-
-
 func (d deck) show() {
+
 	for i, card := range d {
 		fmt.Println(i, card)
-	} 
-}
+	}
 
+}
 
 func deal(d deck, handSize int) (deck, deck) {
 
